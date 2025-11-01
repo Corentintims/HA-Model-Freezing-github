@@ -1,0 +1,308 @@
+{
+  "model_name": "logreg",
+  "test_metrics": {
+    "accuracy": 0.9833333333333333,
+    "f1_score": 0.9714285714285714
+  },
+  "training_data": {
+    "X_train_shape": [
+      236,
+      109
+    ],
+    "X_test_shape": [
+      60,
+      109
+    ],
+    "y_train_shape": [
+      236
+    ],
+    "y_test_shape": [
+      60
+    ]
+  },
+  "cv_results": {
+    "logreg": {
+      "mean": 0.9935483870967742,
+      "std": 0.012903225806451599,
+      "scores": [
+        0.967741935483871,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "svm_rbf": {
+      "mean": 0.933729716338412,
+      "std": 0.0807330522139587,
+      "scores": [
+        1.0,
+        0.782608695652174,
+        0.9629629629629629,
+        0.9230769230769231,
+        1.0
+      ]
+    },
+    "rf": {
+      "mean": 0.9861409796893668,
+      "std": 0.017040907364086446,
+      "scores": [
+        0.967741935483871,
+        1.0,
+        0.9629629629629629,
+        1.0,
+        1.0
+      ]
+    },
+    "gb": {
+      "mean": 0.9792444279652288,
+      "std": 0.017014209522922142,
+      "scores": [
+        0.967741935483871,
+        0.9655172413793104,
+        0.9629629629629629,
+        1.0,
+        1.0
+      ]
+    },
+    "xgb": {
+      "mean": 0.971267219988021,
+      "std": 0.028351154811221215,
+      "scores": [
+        0.967741935483871,
+        0.9655172413793104,
+        0.9230769230769231,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "feature_importance": {
+    "native": null,
+    "permutation": {
+      "num__computed_humid_diff_int_ext_min_MA7": 0.006050420168067228,
+      "num__computed_humid_diff_int_ext_mean_MA7": 0.006050420168067228,
+      "num__internal_temp_delta_MA3": 0.002539682539682542,
+      "num__internal_humid_max_MA3": 0.0,
+      "num__external_sunshine_max_MA5": 0.0,
+      "num__external_sunshine_max_MA3": 0.0,
+      "num__external_sunshine_mean_MA7": 0.0,
+      "num__external_sunshine_mean_MA5": 0.0,
+      "num__external_sunshine_mean_MA3": 0.0,
+      "num__external_sunshine_sum_MA7": 0.0,
+      "num__external_sunshine_sum_MA5": 0.0,
+      "num__external_sunshine_sum_MA3": 0.0,
+      "num__internal_humid_max_MA7": 0.0,
+      "num__internal_humid_max_MA5": 0.0,
+      "num__external_temp_mean": 0.0,
+      "num__computed_temp_diff_int_ext_mean_MA3": 0.0,
+      "num__internal_humid_min_MA7": 0.0,
+      "num__internal_humid_min_MA5": 0.0,
+      "num__internal_humid_min_MA3": 0.0,
+      "num__internal_humid_mean_MA5": 0.0,
+      "num__internal_humid_mean_MA3": 0.0,
+      "num__external_humid_max_MA7": 0.0,
+      "num__external_humid_max_MA5": 0.0,
+      "num__external_humid_max_MA3": 0.0,
+      "num__external_humid_min_MA7": 0.0,
+      "num__external_humid_min_MA5": 0.0,
+      "num__external_humid_min_MA3": 0.0,
+      "num__external_sunshine_max_MA7": 0.0,
+      "num__computed_temp_diff_int_ext_mean_MA7": 0.0,
+      "num__computed_temp_diff_int_ext_mean_MA5": 0.0,
+      "num__external_humid_mean_MA5": 0.0,
+      "num__external_humid_delta_MA5": 0.0,
+      "num__external_humid_delta_MA3": 0.0,
+      "num__external_temp_delta_MA7": 0.0,
+      "num__external_temp_delta_MA5": 0.0,
+      "num__external_temp_delta_MA3": 0.0,
+      "num__internal_humid_delta_MA7": 0.0,
+      "num__internal_humid_delta_MA5": 0.0,
+      "num__internal_humid_delta_MA3": 0.0,
+      "num__computed_humid_diff_int_ext_max_MA7": 0.0,
+      "num__computed_humid_diff_int_ext_max_MA5": 0.0,
+      "num__computed_humid_diff_int_ext_max_MA3": 0.0,
+      "num__computed_humid_diff_int_ext_min_MA5": 0.0,
+      "num__computed_humid_diff_int_ext_min_MA3": 0.0,
+      "num__computed_humid_diff_int_ext_mean_MA5": 0.0,
+      "num__computed_humid_diff_int_ext_mean_MA3": 0.0,
+      "num__computed_temp_diff_int_ext_max_MA7": 0.0,
+      "num__computed_temp_diff_int_ext_max_MA5": 0.0,
+      "num__computed_temp_diff_int_ext_max_MA3": 0.0,
+      "num__computed_temp_diff_int_ext_min_MA7": 0.0,
+      "num__computed_temp_diff_int_ext_min_MA5": 0.0,
+      "num__computed_temp_diff_int_ext_min_MA3": 0.0,
+      "num__external_temp_min": 0.0,
+      "num__external_humid_mean_MA7": 0.0,
+      "num__external_humid_mean_MA3": 0.0,
+      "num__internal_temp_max_MA7": 0.0,
+      "num__computed_temp_diff_int_ext_mean": 0.0,
+      "num__forecast_sunshine_max": 0.0,
+      "num__forecast_sunshine_mean": 0.0,
+      "num__forecast_sunshine_sum": 0.0,
+      "num__external_sunshine_max": 0.0,
+      "num__external_sunshine_mean": 0.0,
+      "num__external_sunshine_sum": 0.0,
+      "num__forecast_humid_max": 0.0,
+      "num__forecast_humid_min": 0.0,
+      "num__forecast_humid_mean": 0.0,
+      "num__internal_humid_max": 0.0,
+      "num__internal_humid_min": 0.0,
+      "num__internal_humid_mean": 0.0,
+      "num__external_humid_max": 0.0,
+      "num__external_humid_min": 0.0,
+      "num__external_humid_mean": 0.0,
+      "num__forecast_temp_max": 0.0,
+      "num__forecast_temp_min": 0.0,
+      "num__forecast_temp_mean": 0.0,
+      "num__internal_temp_max": 0.0,
+      "num__internal_temp_min": 0.0,
+      "num__internal_temp_mean": 0.0,
+      "num__external_temp_max": 0.0,
+      "num__computed_temp_diff_int_ext_min": 0.0,
+      "num__computed_temp_diff_int_ext_max": 0.0,
+      "num__computed_humid_diff_int_ext_mean": 0.0,
+      "num__external_temp_max_MA3": 0.0,
+      "num__internal_temp_max_MA5": 0.0,
+      "num__internal_temp_max_MA3": 0.0,
+      "num__internal_temp_min_MA7": 0.0,
+      "num__internal_temp_min_MA5": 0.0,
+      "num__internal_temp_min_MA3": 0.0,
+      "num__internal_temp_mean_MA7": 0.0,
+      "num__internal_temp_mean_MA5": 0.0,
+      "num__internal_temp_mean_MA3": 0.0,
+      "num__external_temp_max_MA7": 0.0,
+      "num__computed_humid_diff_int_ext_min": 0.0,
+      "num__external_temp_max_MA5": 0.0,
+      "num__external_temp_min_MA7": 0.0,
+      "num__external_temp_min_MA5": 0.0,
+      "num__external_temp_min_MA3": 0.0,
+      "num__external_temp_mean_MA7": 0.0,
+      "num__external_temp_mean_MA5": 0.0,
+      "num__external_temp_mean_MA3": 0.0,
+      "num__external_humid_delta": 0.0,
+      "num__external_temp_delta": 0.0,
+      "num__internal_humid_delta": 0.0,
+      "num__internal_temp_delta": 0.0,
+      "num__computed_humid_diff_int_ext_max": 0.0,
+      "num__external_humid_delta_MA7": 0.0,
+      "num__internal_humid_mean_MA7": -0.002689075630252102,
+      "num__internal_temp_delta_MA5": -0.005714285714285716,
+      "num__internal_temp_delta_MA7": -0.017142857142857147
+    }
+  },
+  "timestamp": "2025-11-01T02:01:53.709945",
+  "config": {
+    "project": {
+      "name": "HA Freezing Model",
+      "version": "2.0.0",
+      "description": "Predict freezing conditions using Home Assistant sensor data"
+    },
+    "data_sources": {
+      "internal": {
+        "csv_path_temp": "Data/internal_source/Internal_temp_original.csv",
+        "csv_path_humid": "Data/internal_source/Internal_humidity_original.csv"
+      },
+      "home_assistant": {
+        "base_url": "http://192.168.1.57:8123",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIwODBkNWJlYjZlYjM0YTQ3YmE5MjNjM2Y3ODkxM2M1NSIsImlhdCI6MTc2MTY4MzM1MSwiZXhwIjoyMDc3MDQzMzUxfQ.9OgMhVwwnUOmn4IORgFyEaPtugm2yBo1mqmCwKddDkY",
+        "sensors": {
+          "temperature": {
+            "id": "sensor.0x00124b00292c383c_temperature",
+            "data_col": "temp_int"
+          },
+          "humidity": {
+            "id": "sensor.0x00124b00292c383c_humidity",
+            "data_col": "humid_int"
+          },
+          "boiler": {
+            "id": "switch.0xa4c138422177f81b",
+            "data_col": "boiler_state"
+          },
+          "freezing": {
+            "id": "input_boolean.freezing",
+            "data_col": "freezing_on"
+          }
+        }
+      },
+      "openmeteo": {
+        "base_url": "https://api.open-meteo.com",
+        "archive_url": "https://archive-api.open-meteo.com",
+        "coordinates": {
+          "latitude": 50.79279599354295,
+          "longitude": 4.328090739897015,
+          "timezone": "Europe/Brussels"
+        }
+      }
+    },
+    "data_processing": {
+      "default_end_date": "today",
+      "lookback_days": 365,
+      "moving_averages": {
+        "windows": [
+          3,
+          5,
+          7
+        ]
+      },
+      "resample_frequency": "1H",
+      "gap_fill_limit": 2,
+      "excluded_features": [
+        "wind_speed",
+        "wind_bearing",
+        "precipitation"
+      ]
+    },
+    "model": {
+      "target_column": "freezing_on_tomorrow",
+      "test_size": 0.2,
+      "random_state": 42,
+      "cv_folds": 5,
+      "cv_scoring": "f1",
+      "models": [
+        "logreg",
+        "svm_rbf",
+        "rf",
+        "gb",
+        "xgb"
+      ],
+      "model_params": {
+        "rf": {
+          "n_estimators": 400
+        },
+        "gb": {
+          "n_estimators": 400
+        },
+        "xgb": {
+          "n_estimators": 400,
+          "learning_rate": 0.05,
+          "max_depth": 5,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9
+        }
+      }
+    },
+    "paths": {
+      "data_dir": "Data",
+      "output_dir": "Data/Output",
+      "model_dir": "Data/Output/model",
+      "history_dir": "Data/internal_source/history"
+    },
+    "logging": {
+      "level": "INFO",
+      "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+      "file": "logs/ha_freezing_model.log"
+    },
+    "freezing_rules": {
+      "winter_period": {
+        "start_month": 11,
+        "start_day": 1,
+        "end_month": 4,
+        "end_day": 2
+      },
+      "special_dates": [
+        "2025-10-27"
+      ]
+    }
+  }
+}
