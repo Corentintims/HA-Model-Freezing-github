@@ -71,7 +71,7 @@ pure_eval
 pycparser
 Pygments
 pyparsing
-PyQt6==6.9.1
+PyQt6
 PyQt6_sip
 PySocks
 python-dateutil
@@ -88,9 +88,9 @@ rfc3986_validator
 rpds-py
 scikit-learn
 scipy
-seaborn==0.13.2
+seaborn
 Send2Trash
-setuptools==80.9.0
+setuptools
 sip
 six
 sniffio
@@ -107,6 +107,6 @@ urllib3
 wcwidth
 webencodings
 websocket-client
-wheel==0.45.1
+wheel
 win_inet_pton
 xgboost
