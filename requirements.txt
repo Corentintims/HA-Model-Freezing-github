@@ -46,10 +46,10 @@ jupyterlab_pygments
 jupyterlab_server
 kiwisolver
 MarkupSafe
-matplotlib==3.10.6
+matplotlib
 matplotlib-inline
 mistune
-mkl-service==2.5.2
+mkl-service
 mkl_fft
 mkl_random
 nbclient
