@@ -14,6 +14,7 @@ data_sources:
 
   home_assistant:
     base_url: "http://192.168.1.57:8123"
+    ws_url: "ws://192.168.1.57:8123/api/websocket"
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIwODBkNWJlYjZlYjM0YTQ3YmE5MjNjM2Y3ODkxM2M1NSIsImlhdCI6MTc2MTY4MzM1MSwiZXhwIjoyMDc3MDQzMzUxfQ.9OgMhVwwnUOmn4IORgFyEaPtugm2yBo1mqmCwKddDkY"
     sensors:
       temperature: 
@@ -28,6 +29,12 @@ data_sources:
       freezing: 
         id: "input_boolean.freezing"
         data_col: "freezing_on"
+      prediction:
+        id: "input_boolean.prediction_freezing"
+        data_col: "pred_freezing"
+      prediction_prob: 
+        id: "input_number.prediction_freezing_probability"
+        data_col: "pred_freezing_prob"
   
   openmeteo:
     base_url: "https://api.open-meteo.com"

@@ -11,7 +11,7 @@ from Code.utils.features_building import build_features
 from Code.data_fetching.fetch_HA import fetch_sensor_history
 from Code.data_fetching.fetch_openmeto import fetch_weather
 from Code.data_fetching.save_history import save_sensor_history
-from Code.utils.utils import _load_config, setup_data_directory, check_first_run
+from Code.utils.utils import _load_config, setup_data_directory, check_first_run, send_to_HA
 
 def load_model(model_dir):
     model_path = model_dir / "best_model.pkl"
@@ -55,10 +55,11 @@ def make_predictions():
 
     df_sensors = []
     for sensor_name, sensor_info in sensors_dict.items():
-        csv_path = history_dir / f"{sensor_name}_history.csv"
-        df_sensor = fetch_sensor_history(start_date, end_date, config_file, sensor_info=sensor_info)
-        df_sensors.append(df_sensor)
-        save_sensor_history(df_sensor, csv_path, first_run)
+        if sensor_name not in ['prediction','prediction_prob']:
+            csv_path = history_dir / f"{sensor_name}_history.csv"
+            df_sensor = fetch_sensor_history(start_date, end_date, config_file, sensor_info=sensor_info)
+            df_sensors.append(df_sensor)
+            save_sensor_history(df_sensor, csv_path, first_run)
 
     df_weather  = fetch_weather(start_date, end_date, config_file, 'historical')
     df_forecast = fetch_weather(target_date, target_date, config_file, 'forecast')
@@ -83,6 +84,7 @@ def make_predictions():
     freezing_status = "FREEZING EXPECTED" if predictions == 1 else "No freezing expected"
     prob_text = f" (Probability: {probabilities[predictions]:.2f})"
     print(f"Date: {target_date} - {freezing_status}{prob_text}")
+    send_to_HA(config_file, predictions, probabilities[predictions])
     
     # print("OK - Predictions completed successfully")
 
