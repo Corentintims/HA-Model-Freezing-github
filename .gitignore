@@ -1,1 +1,3 @@
 clean_requirements.py
+*.pyc
+*.csv
