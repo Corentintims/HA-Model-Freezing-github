@@ -48,10 +48,7 @@ def check_first_run(sensors_dict: dict, history_dir: Path) -> bool:
     if not all_exist:
         # Cleanup any existing CSVs
         for f in history_dir.glob("*.csv"):
-            try:
                 f.unlink()
-            except Exception as e:
-                print(f"⚠️ Could not delete {f}: {e}")
         return True
 
     return False

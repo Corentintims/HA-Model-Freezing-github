@@ -25,7 +25,7 @@ def save_sensor_history(df, csv_path, first_run):
 
     # Determine which dates are already present in the CSV
     existing_dates = df["datetime"].dt.date.unique()
-    print(existing_dates)
+    # print(existing_dates)
 
     # Append only if that date is not already in the CSV
     if last_date not in existing_dates:

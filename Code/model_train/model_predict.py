@@ -32,7 +32,7 @@ def load_model(model_dir):
 
 def make_predictions():
     """Make predictions for a specific date."""
-    print("Making predictions...")
+    # print("Making predictions...")
     """Main function for testing data utilities."""
     setup_data_directory(project_root)
     config_path = "config.yaml"
@@ -77,14 +77,14 @@ def make_predictions():
     if hasattr(model, "predict_proba"):
         probabilities = model.predict_proba(row_predict)[0]
     
-    # Print results
-    print(f"\nPREDICTION RESULTS for {target_date}")
-    print("=" * 50)
+    # # print results
+    # print(f"\nPREDICTION RESULTS for {target_date}")
+    # print("=" * 50)
     freezing_status = "FREEZING EXPECTED" if predictions == 1 else "No freezing expected"
     prob_text = f" (Probability: {probabilities[predictions]:.2f})"
     print(f"Date: {target_date} - {freezing_status}{prob_text}")
     
-    print("OK - Predictions completed successfully")
+    # print("OK - Predictions completed successfully")
 
 def main():
     make_predictions()

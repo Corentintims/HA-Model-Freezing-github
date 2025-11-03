@@ -40,7 +40,7 @@ def fetch_sensor_history(start_date, end_date, config_file, sensor_info):
         data = response.json()
         
         if not data or not data[0]:
-            print(f"No data found for {entity_id} in chunk {start_time} to {end_time}")
+            # print(f"No data found for {entity_id} in chunk {start_time} to {end_time}")
             return
         
         # Convert to DataFrame
@@ -67,8 +67,8 @@ def fetch_sensor_history(start_date, end_date, config_file, sensor_info):
         return result
         
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching data for {entity_id}: {e}")
+        # print(f"Error fetching data for {entity_id}: {e}")
         return
     except Exception as e:
-        print(f"Unexpected error for {entity_id}: {e}")
+        # print(f"Unexpected error for {entity_id}: {e}")
         return
