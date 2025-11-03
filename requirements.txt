@@ -84,7 +84,7 @@ requests
 rfc3339_validator
 rfc3986_validator
 rpds-py
-scikit-learn=1.7.1
+scikit-learn==1.7.1
 scipy
 seaborn
 Send2Trash
