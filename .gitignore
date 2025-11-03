@@ -1,3 +1,9 @@
-clean_requirements.py
+# Ignore les fichiers Python compilés
 *.pyc
+__pycache__/
+
+# Ignore tous les fichiers CSV
 *.csv
+
+# Optionnel : ignore le fichier de script que tu ne veux pas tracker
+clean_requirements.py
